@@ -34,12 +34,17 @@ declare global {
   }
 
   export interface OtherInfo {
-    date: string
+    date: string;
     icp?: {
-      text: string
-      link: string
-    }
+      text: string;
+      link: string;
+    };
+    psbInfo?: {
+      text: string;
+      link: string;
+    };
   }
+  
 
   export interface Custom {
     css: string[]
