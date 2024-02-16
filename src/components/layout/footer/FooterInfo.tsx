@@ -196,18 +196,18 @@ const FooterBottom = async () => {
         {psbInfo && (
           <>
             <Divider className="hidden md:inline" />
-            <span className="inline-flex items-center">
+            <div className="inline-flex flex-wrap items-center justify-center md:justify-start">
               <Image
-                src="/gaico.png"
+                src="https://www.gmoe.cc/gaico.png"
                 alt="GA Icon"
                 width={16}
                 height={16}
-                className="mr-1"
+                className="mb-1 mr-1 md:mb-0"
               />
               <StyledLink href={psbInfo.link} target="_blank" rel="noreferrer">
                 {psbInfo.text}
               </StyledLink>
-            </span>
+            </div>
           </>
         )}
 
