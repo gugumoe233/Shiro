@@ -183,7 +183,7 @@ const FooterBottom = async () => {
         </span>
       </p>
       <div>
-        <PoweredBy className="my-3 block md:my-0 md:inline" />
+        {/* <PoweredBy className="my-3 block md:my-0 md:inline" /> */}
 
         <div className="flex flex-col flex-wrap items-center justify-center md:flex-row md:justify-start">
           <div className="my-3 md:my-0">
@@ -227,7 +227,7 @@ const FooterBottom = async () => {
           )}
         </div>
 
-        <Divider className="inline" />
+        {/* <Divider className="inline" /> */}
         <GatewayInfo />
         {/* {!!lastVisitor && (
           <>

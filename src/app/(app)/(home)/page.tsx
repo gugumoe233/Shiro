@@ -208,9 +208,7 @@ const Welcome = () => {
             'text-neutral-800/80 center dark:text-neutral-200/80',
           )}
         >
-          <small>
-            当第一颗卫星飞向大气层外，我们便以为自己终有一日会征服宇宙。
-          </small>
+          <small>あなたの心に寄り添う、ささやかな歌を奏でたい。</small>
           <span className="mt-8 animate-bounce">
             <i className="icon-[mingcute--right-line] rotate-90 text-2xl" />
           </span>
@@ -238,7 +236,7 @@ const PostScreen = () => {
           transition={softSpringPreset}
           className="text-3xl font-medium leading-loose"
         >
-          这里记录着对技术的洞察与创新，是追求未来无限可能的见证。
+          看看最近有没有什么有趣的事情 👀
         </m.h2>
         <div>
           <ul className="space-y-4">
@@ -494,7 +492,7 @@ const FriendScreen = () => {
     <Screen className="flex h-auto min-h-[100vh] center">
       <div className="flex min-w-0 flex-col">
         <BottomToUpTransitionView className="text-center text-3xl font-medium">
-          这些是我珍视的人，他们陪伴我走过人生的每一段旅程。
+          这些是我的好朋友们 🎉
         </BottomToUpTransitionView>
         <ul
           className={clsx(
