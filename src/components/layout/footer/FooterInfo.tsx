@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import type { FooterConfig } from './config'
 
@@ -152,7 +153,7 @@ const FooterBottom = async () => {
   const footerConfig = footer || {}
   const { otherInfo } = footerConfig
   const currentYear = new Date().getFullYear().toString()
-  const { date = currentYear, icp, psbInfo } = otherInfo || {}; 
+  const { date = currentYear, icp, psbInfo } = otherInfo || {}
 
   return (
     <div className="mt-12 space-y-3 text-center md:mt-6 md:text-left">
@@ -195,9 +196,18 @@ const FooterBottom = async () => {
         {psbInfo && (
           <>
             <Divider className="hidden md:inline" />
-            <StyledLink href={psbInfo.link} target="_blank" rel="noreferrer">
-              {psbInfo.text}
-            </StyledLink>
+            <span className="inline-flex items-center">
+              <Image
+                src="/gaico.png"
+                alt="GA Icon"
+                width={16}
+                height={16}
+                className="mr-1"
+              />
+              <StyledLink href={psbInfo.link} target="_blank" rel="noreferrer">
+                {psbInfo.text}
+              </StyledLink>
+            </span>
           </>
         )}
 
