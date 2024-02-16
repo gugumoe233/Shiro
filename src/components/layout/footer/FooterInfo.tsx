@@ -184,32 +184,48 @@ const FooterBottom = async () => {
       </p>
       <div>
         <PoweredBy className="my-3 block md:my-0 md:inline" />
-        {icp && (
-          <>
-            <Divider className="hidden md:inline" />
-            <StyledLink href={icp.link} target="_blank" rel="noreferrer">
-              {icp.text}
-            </StyledLink>
-          </>
-        )}
 
-        {psbInfo && (
-          <>
-            <Divider className="hidden md:inline" />
-            <div className="inline-flex flex-wrap items-center justify-center md:justify-start">
-              <Image
-                src="https://www.gmoe.cc/gaico.png"
-                alt="GA Icon"
-                width={16}
-                height={16}
-                className="mb-1 mr-1 md:mb-0"
-              />
-              <StyledLink href={psbInfo.link} target="_blank" rel="noreferrer">
-                {psbInfo.text}
+        <div className="flex flex-col flex-wrap items-center justify-center md:flex-row md:justify-start">
+          <div className="my-3 md:my-0">
+            <PoweredBy className="md:inline" />
+          </div>
+
+          {icp && (
+            <>
+              <Divider className="mx-2 hidden md:inline" />
+              <StyledLink
+                href={icp.link}
+                target="_blank"
+                rel="noreferrer"
+                className="my-3 md:my-0"
+              >
+                {icp.text}
               </StyledLink>
-            </div>
-          </>
-        )}
+            </>
+          )}
+
+          {psbInfo && (
+            <>
+              <Divider className="mx-2 hidden md:inline" />
+              <div className="my-3 inline-flex items-center justify-center md:my-0 md:justify-start">
+                <Image
+                  src="https://www.gmoe.cc/gaico.png"
+                  alt="GA Icon"
+                  width={16}
+                  height={16}
+                  className="mr-1"
+                />
+                <StyledLink
+                  href={psbInfo.link}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {psbInfo.text}
+                </StyledLink>
+              </div>
+            </>
+          )}
+        </div>
 
         <Divider className="inline" />
         <GatewayInfo />
