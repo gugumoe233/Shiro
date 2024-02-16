@@ -519,12 +519,14 @@ const FriendScreen = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <div
-                      className="aspect-square h-[80px] w-[80px] rounded-full bg-contain bg-center ring-1 ring-slate-200/80 dark:bg-neutral-800/80"
-                      style={{
-                        backgroundImage: `url(${friend.avatar})`,
-                      }}
-                      aria-hidden
+                    <Image
+                      src={friend.avatar}
+                      alt={friend.name}
+                      width={80}
+                      height={80}
+                      className="rounded-full bg-contain bg-center ring-1 ring-slate-200/80 dark:bg-neutral-800/80"
+                      priority={true} // 可选，如果你想要这些图片有更高的加载优先级
+                      layout="fixed" // 设置图片布局为固定
                     />
                     <span className="mt-5 w-full min-w-0 truncate text-center">
                       {friend.name}
