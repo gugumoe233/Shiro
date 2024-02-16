@@ -519,15 +519,15 @@ const FriendScreen = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <Image
-                      src={friend.avatar}
-                      alt={friend.name}
-                      width={80}
-                      height={80}
-                      className="rounded-full bg-contain bg-center ring-1 ring-slate-200/80 dark:bg-neutral-800/80"
-                      priority={true} // 可选，如果你想要这些图片有更高的加载优先级
-                      layout="fixed" // 设置图片布局为固定
-                    />
+                    <div className="relative aspect-square h-[80px] w-[80px] overflow-hidden rounded-full ring-1 ring-slate-200/80 dark:ring-neutral-800/80">
+                      <Image
+                        src={friend.avatar}
+                        alt={friend.name}
+                        layout="fill"
+                        objectFit="cover" // 确保图片覆盖整个容器区域并且保持比例
+                        className="rounded-full" // 应用圆形样式
+                      />
+                    </div>
                     <span className="mt-5 w-full min-w-0 truncate text-center">
                       {friend.name}
                     </span>
